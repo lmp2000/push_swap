@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 21:16:13 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/08 22:04:47 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ void	pa(t_stack *a, t_stack *b);
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);
+void	ss(t_stack *a, t_stack *b);
+
+void	ra(t_stack *a);
+void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
 
 // Utils
 t_node	*pop_top(t_stack	*s);
