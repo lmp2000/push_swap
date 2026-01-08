@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 22:29:25 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 00:11:42 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/08 21:16:56 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,26 @@ void	push_bot(t_stack *s, t_node *n)
 		s->bot = n;
 		s->size++;
 	}
+}
+
+void	swap_top(t_stack *s)
+{
+	t_node	*first;
+	t_node	*second;
+	t_node	*third;
+
+	if (!s || s->size < 2 || !s->top)
+    	return ;
+	first = s->top;
+	second = s->top->next;
+	third = second->next;
+	s->top = second;
+	second->prev = NULL;
+	second->next = first;
+	first->prev = second;
+	first->next = third;
+	if (third)
+		third->prev = first;
+	else
+		s->bot = first;
 }
