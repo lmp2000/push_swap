@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 00:50:23 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/08 17:04:02 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ typedef struct	s_stack
 	int		size;	// number of elements
 	char	name;	// stack a or stack b?
 }	t_stack;
+
+// Ops
+
+void	pb(t_stack *a, t_stack *b);
+void	pa(t_stack *a, t_stack *b);
 
 // Utils
 t_node	*pop_top(t_stack	*s);
