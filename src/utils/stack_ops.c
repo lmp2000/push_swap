@@ -6,13 +6,13 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 22:29:25 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 21:16:56 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/08 22:14:27 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*pop_top(t_stack	*s)
+t_node	*pop_top(t_stack *s)
 {
 	t_node	*n;
 
@@ -34,6 +34,31 @@ t_node	*pop_top(t_stack	*s)
 		s->size--;
 	}
 	n->prev = NULL;
+	return (n);
+}
+
+t_node	*pop_bot(t_stack *s)
+{
+	t_node	*n;
+
+	if (!s || s->size == 0 || !s->bot)
+		return (NULL);
+	n = s->bot;
+	if (s->size == 1)
+	{
+		s->top = NULL;
+		s->bot = NULL;
+		n->prev = NULL;
+		s->size = 0;
+	}
+	else
+	{
+		s->bot = n->prev;
+		s->bot->next = NULL;
+		n->prev = NULL;
+		s->size--;
+	}
+	n->next = NULL;
 	return (n);
 }
 

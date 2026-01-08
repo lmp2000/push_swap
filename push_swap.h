@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 22:04:47 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/08 22:23:46 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,18 @@ void	ra(t_stack *a);
 void	rb(t_stack *b);
 void	rr(t_stack *a, t_stack *b);
 
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
+
 // Utils
 t_node	*pop_top(t_stack	*s);
+t_node	*pop_bot(t_stack *s);
 void	push_top(t_stack *s, t_node *n);
-t_node	*new_node(int value);
 void	push_bot(t_stack *s, t_node *n);
-void	free_nodes(t_stack *s);
 void	swap_top(t_stack *s);
+
+t_node	*new_node(int value);
+void	free_nodes(t_stack *s);
 
 # endif

@@ -1,54 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rot_ops.c                                          :+:      :+:    :+:   */
+/*   revrot_ops.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 21:41:55 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 22:15:55 by lude-jes         ###   ########.fr       */
+/*   Created: 2026/01/08 22:13:40 by lude-jes          #+#    #+#             */
+/*   Updated: 2026/01/08 22:22:56 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stack *a)
+void	rra(t_stack *a)
 {
-	t_node	*first;
-
+	t_node	*last;
+	
 	if (a->size < 2)
 		return ;
-	first = pop_top(a);
-	push_bot(a, first);
-	write (1, "ra\n", 3);
+	last = pop_bot(a);
+	push_top(a, last);
+	write (1, "rra\n", 4);
 }
 
-void	rb(t_stack *b)
+void	rrb(t_stack *b)
 {
-	t_node	*first;
+	t_node *last;
 
 	if (b->size < 2)
 		return ;
-	first = pop_top(b);
-	push_bot(b, first);
-	write (1, "rb\n", 3);
+	last = pop_bot(b);
+	push_top(b, last);
+	write (1, "rrb\n", 4);
 }
 
-void	rr(t_stack *a, t_stack *b)
+void	rrr(t_stack *a, t_stack *b)
 {
-	t_node	*first;
+	t_node	*last;
 
 	if (a->size < 2 && b->size < 2)
 		return ;
 	if (a->size >= 2)
 	{
-		first = pop_top(a);
-		push_bot(a, first);
+		last = pop_bot(a);
+		push_top(a, last);
 	}
 	if (b->size >= 2)
 	{
-		first = pop_top(b);
-		push_bot(b, first);
+		last = pop_bot(b);
+		push_top(b, last);
 	}
-	write (1, "rr\n", 3);
+	write (1, "rrr\n", 4);
 }
