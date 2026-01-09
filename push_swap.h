@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 22:23:46 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:45:50 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ typedef struct	s_stack
 }	t_stack;
 
 // Ops
-
 void	pb(t_stack *a, t_stack *b);
 void	pa(t_stack *a, t_stack *b);
 
@@ -49,6 +48,10 @@ void	rr(t_stack *a, t_stack *b);
 void	rra(t_stack *a);
 void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
+
+// Parsing
+int	is_valid_int_token(char *s);
+int	safe_atoi(const char *s, int *out);
 
 // Utils
 t_node	*pop_top(t_stack	*s);
