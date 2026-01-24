@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/21 18:12:01 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/24 17:24:16 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <limits.h>
+# include "Libft/libft.h"
 
 typedef struct	s_node
 {
@@ -51,6 +52,8 @@ void	rrr(t_stack *a, t_stack *b);
 // Parsing
 int	is_valid_int_token(char *s);
 int	safe_atoi(const char *s, int *out);
+
+int	parse_input(int argc, char **argv, t_stack *a); // public parsing API
 
 // Utils
 t_node	*pop_top(t_stack	*s);
