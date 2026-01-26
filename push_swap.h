@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/24 21:04:44 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/26 23:31:01 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,17 @@ void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 
 // Sorting
-int *stack_to_array(t_stack *a);
+int 	*stack_to_array(t_stack *a);
 void	sort_int_array(int *arr, int size);
+
+int 	is_sorted(t_stack *a);
+void	sort_2(t_stack *a);
+void	sort_3(t_stack *a);
+void	sort_4_5(t_stack *a, t_stack *b);
+void	sort_small(t_stack *a, t_stack *b);
+
+int		index_pos(t_stack *a, int target);
+void	rotate_to_top(t_stack *a, int pos);
 
 // Parsing
 int	is_valid_int_token(char *s);
