@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/28 19:00:20 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/01/29 00:43:32 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,10 @@ void	rotate_to_top(t_stack *a, int pos);
 
 // Turk
 t_node	*find_target_a(t_stack *a, int b_index);
+int 	pos_of_node(t_stack *s, t_node *node);
+int 	rot_cost(t_stack *s, int pos);
+int		combined_cost(int cost_a, int cost_b);
+int 	total_cost_for_node(t_stack *a, t_stack *b, t_node *bnode);
 
 // Parsing
 int	is_valid_int_token(char *s);
