@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 20:34:58 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/03 22:09:07 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <limits.h>
-# include "Libft/libft.h"
 
 typedef struct	s_node
 {
@@ -87,6 +86,7 @@ t_node	*pop_bot(t_stack *s);
 void	push_top(t_stack *s, t_node *n);
 void	push_bot(t_stack *s, t_node *n);
 void	swap_top(t_stack *s);
+char	**ft_split(char const *s, char c);
 
 t_node	*new_node(int value);
 void	free_nodes(t_stack *s);
