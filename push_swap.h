@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 19:22:08 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/03 20:34:58 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void	rrr(t_stack *a, t_stack *b);
 // Sorting
 int 	*stack_to_array(t_stack *a);
 void	sort_int_array(int *arr, int size);
+int		find_index(int *arr, int size, int value);
+int		assign_indexes(t_stack *a);
 
 int 	is_sorted(t_stack *a);
 void	sort_2(t_stack *a);
