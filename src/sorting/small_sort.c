@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 19:12:42 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/26 23:47:36 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/03 23:02:01 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,16 @@ void	sort_3(t_stack *a)
 {
 	int	top;
 	int	mid;
+	int	bot;
 	
 	if (a == NULL || a->size != 3)
 		return ;
 	top = a->top->index;
 	mid = a->top->next->index;
-	if (top == 2)
+	bot = a->bot->index;
+	if (top > mid && top > bot)
 		ra(a);
-	else if (mid == 2)
+	else if (mid > top && mid > bot)
 		rra(a);
 	if (a->top->index > a->top->next->index)
 		sa(a);

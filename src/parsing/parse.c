@@ -99,7 +99,6 @@ int	parse_input(int argc, char **argv, t_stack *a)
 		if (!parse_argv_string(a, argv[i]))
 		{
 			free_nodes(a);
-			write (2, "Error\n", 6);
 			return (0);
 		}
 		i++;

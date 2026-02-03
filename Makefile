@@ -67,6 +67,7 @@ SRCS		= $(MAIN) \
 # Object files
 OBJS		= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
+
 # ══════════════════════════════════════════════════════════════════════════════
 #                                    FLAGS
 # ══════════════════════════════════════════════════════════════════════════════
@@ -98,6 +99,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC_DIR)/push_swap.h
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 	@echo "$(CYAN)Compiling: $(notdir $<)$(RESET)"
+
 
 clean:
 	@rm -rf $(OBJ_DIR)

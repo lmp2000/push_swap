@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 22:09:07 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/03 22:39:56 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <limits.h>
+# include <unistd.h>
 
 typedef struct	s_node
 {
@@ -75,7 +76,7 @@ t_node	*find_cheapest_bnode(t_stack *a, t_stack *b);
 void	turk_sort(t_stack *a, t_stack *b);
 
 // Parsing
-int	is_valid_int_token(char *s);
+int	is_valid_token(char *s);
 int	safe_atoi(const char *s, int *out);
 
 int	parse_input(int argc, char **argv, t_stack *a); // public parsing API
