@@ -6,13 +6,13 @@
 /*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 18:50:59 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/28 19:49:37 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/03 19:21:59 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_node	*find_min(t_stack *a)
+t_node	*find_min(t_stack *a)
 {
 	t_node	*min;
 	t_node	*ptr;
