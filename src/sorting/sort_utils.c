@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 21:00:31 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/26 22:19:29 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:07:59 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	index_pos(t_stack *a, int target)
 {
 	t_node	*n;
 	int		counter;
-	
+
 	if (a == NULL)
 		return (-1);
 	n = a->top;
@@ -42,6 +42,7 @@ static void	rotate_forward(t_stack *a, int times)
 		times--;
 	}
 }
+
 static void	rotate_reverse(t_stack *a, int times)
 {
 	while (times)
@@ -58,7 +59,7 @@ void	rotate_to_top(t_stack *a, int pos)
 {
 	int	forward;
 	int	reverse;
-	
+
 	if (a == NULL || a->size < 2 || pos <= 0)
 		return ;
 	if (pos >= a->size)

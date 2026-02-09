@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 01:05:22 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/29 02:12:50 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:11:20 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	both_positive(t_stack *a, t_stack *b, int cost_a, int cost_b)
 	while (cost_a--)
 		ra(a);
 	while (cost_b--)
-		rb(b);	
+		rb(b);
 }
 
 static void	both_negative(t_stack *a, t_stack *b, int cost_a, int cost_b)
@@ -37,7 +37,7 @@ static void	both_negative(t_stack *a, t_stack *b, int cost_a, int cost_b)
 	while (cost_a++)
 		rra(a);
 	while (cost_b++)
-		rrb(b);	
+		rrb(b);
 }
 
 static void	rotate_positive(t_stack *s, int cost_s)
@@ -79,7 +79,7 @@ void	move_node_to_a(t_stack *a, t_stack *b, t_node *bnode)
 	t_node	*target;
 	int		cost_a;
 	int		cost_b;
-	
+
 	if (!a || !b || !bnode || b->size == 0)
 		return ;
 	target = find_target_a(a, bnode->index);

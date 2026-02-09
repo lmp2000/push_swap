@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 20:07:51 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 22:00:35 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:01:33 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int ac, char **av)
 {
 	t_stack	a;
 	t_stack	b;
-	
+
 	if (ac < 2)
 		return (0);
 	init_stacks(&a, &b);

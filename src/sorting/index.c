@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 17:41:16 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/24 21:39:28 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:06:26 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int *stack_to_array(t_stack *a)
+int	*stack_to_array(t_stack *a)
 {
 	int		*array;
 	int		i;
 	int		size;
 	t_node	*n;
-	
+
 	i = 0;
 	if (!a || a->size == 0)
 		return (NULL);
@@ -84,13 +84,13 @@ int	assign_indexes(t_stack *a)
 {
 	int		*arr;
 	t_node	*n;
-	
+
 	if (!a || a->size < 2)
 		return (1);
 	n = a->top;
 	arr = stack_to_array(a);
 	if (!arr)
-		return (0);	
+		return (0);
 	sort_int_array(arr, a->size);
 	while (n)
 	{

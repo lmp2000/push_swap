@@ -6,7 +6,7 @@
 /*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:26:36 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/21 18:11:04 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 18:33:14 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,39 @@ int	is_valid_token(char *s)
 	return (1);
 }
 
+static int	sign_handler(char **s)
+{
+	int		sign;
+
+	sign = 1;
+	if (**s == '+' || **s == '-')
+	{
+		if (**s == '-')
+			sign = -1;
+		(*s)++;
+	}
+	return (sign);
+}
+
 int	safe_atoi(const char *s, int *out)
 {
 	long	box;
 	long	limit;
 	int		sign;
 	int		digit;
-	
+
 	if (!s || !out)
 		return (0);
 	box = 0;
-	sign = 1;
-	if (*s == '+' || *s == '-')
-	{
-		if (*s == '-')
-			sign = -1;
-		s++;
-	}
-	limit = (sign == 1) ? (long)INT_MAX : -(long)INT_MIN;
+	sign = sign_handler((char **)&s);
+	if (sign == 1)
+		limit = (long)INT_MAX;
+	else
+		limit = -(long)INT_MIN;
 	while (*s)
 	{
 		digit = *s - '0';
-		if (box > (limit - digit) / 10)		// box * 10 + digit > limit?
+		if (box > (limit - digit) / 10)
 			return (0);
 		box = box * 10 + digit;
 		s++;

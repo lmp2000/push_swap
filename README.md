@@ -34,9 +34,7 @@ make fclean
 # Resources
 
 - 42 Subject PDF for `push_swap` (project specification and constraints).
-- Official GNU Make documentation: https://www.gnu.org/software/make/manual/make.html
-- C standard library reference: https://man7.org/linux/man-pages/ (e.g., `man 3 write`)
-- Classic stack operation explanations: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+- Web articles
 
 ## AI Usage
 

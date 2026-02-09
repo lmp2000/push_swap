@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   target.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 18:50:59 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 19:21:59 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:11:34 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_node	*find_target_a(t_stack *a, int b_index)
 {
 	t_node	*target;
 	t_node	*ptr;
-	
+
 	if (a == NULL || a->size == 0)
 		return (NULL);
 	ptr = a->top;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_ops.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 22:29:25 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/08 22:14:27 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:12:26 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ t_node	*pop_top(t_stack *s)
 
 	if (!s || s->size == 0 || !s->top)
 		return (NULL);
-
 	n = s->top;
 	if (s->size == 1)
 	{
@@ -111,7 +110,7 @@ void	swap_top(t_stack *s)
 	t_node	*third;
 
 	if (!s || s->size < 2 || !s->top)
-    	return ;
+		return ;
 	first = s->top;
 	second = s->top->next;
 	third = second->next;

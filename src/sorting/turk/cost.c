@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   cost.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 21:06:44 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/29 00:58:49 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:10:28 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int pos_of_node(t_stack *s, t_node *node)
+int	pos_of_node(t_stack *s, t_node *node)
 {
 	t_node	*ptr;
 	int		counter;
-	
+
 	if (s == NULL || node == NULL)
 		return (-1);
 	counter = 0;
@@ -31,11 +31,11 @@ int pos_of_node(t_stack *s, t_node *node)
 	return (-1);
 }
 
-int 	rot_cost(t_stack *s, int pos)
+int	rot_cost(t_stack *s, int pos)
 {
 	int	forward_cost;
 	int	reverse_cost;
-	
+
 	if (s == NULL || s->size < 2 || pos == 0)
 		return (0);
 	forward_cost = pos;
@@ -56,7 +56,7 @@ static int	ft_absolute(int c)
 int	combined_cost(int cost_a, int cost_b)
 {
 	int	total;
-	
+
 	if (cost_a < 0 && cost_b < 0)
 	{
 		if (cost_a <= cost_b)
@@ -76,7 +76,7 @@ int	combined_cost(int cost_a, int cost_b)
 	return (total);
 }
 
-int 	total_cost_for_node(t_stack *a, t_stack *b, t_node *bnode)
+int	total_cost_for_node(t_stack *a, t_stack *b, t_node *bnode)
 {
 	t_node	*target;
 	int		temp;
@@ -87,7 +87,7 @@ int 	total_cost_for_node(t_stack *a, t_stack *b, t_node *bnode)
 		return (-1);
 	target = find_target_a(a, bnode->index);
 	if (!target)
-    	return (-1);
+		return (-1);
 	temp = pos_of_node(a, target);
 	if (temp < 0)
 		return (-1);

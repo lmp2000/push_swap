@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 19:12:42 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 23:02:01 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:06:45 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	is_sorted(t_stack *a)
 {
 	t_node	*n;
-	
+
 	if (a == NULL)
 		return (0);
 	if (a->size < 2)
@@ -33,7 +33,7 @@ int	is_sorted(t_stack *a)
 void	sort_2(t_stack *a)
 {
 	t_node	*n;
-	
+
 	if (a == NULL || a->size != 2)
 		return ;
 	n = a->top;
@@ -47,7 +47,7 @@ void	sort_3(t_stack *a)
 	int	top;
 	int	mid;
 	int	bot;
-	
+
 	if (a == NULL || a->size != 3)
 		return ;
 	top = a->top->index;

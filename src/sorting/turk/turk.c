@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   turk.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 18:24:10 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 23:40:03 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:11:55 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_node	*find_cheapest_bnode(t_stack *a, t_stack *b)
 	t_node	*cheapest;
 	int		c;
 	int		best_c;
-	
+
 	if (!a || !b)
 		return (NULL);
 	n = b->top;
@@ -71,7 +71,7 @@ void	turk_sort(t_stack *a, t_stack *b)
 	t_node	*cheapest;
 	int		pos;
 	int		pivot;
-	
+
 	if (is_sorted(a) || a->size <= 5)
 		return ;
 	pivot = a->size / 2;

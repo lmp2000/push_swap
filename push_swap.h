@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:06 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/02/03 22:39:56 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:01:13 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <limits.h>
 # include <unistd.h>
 
-typedef struct	s_node
+typedef struct s_node
 {
 	int				value;	// the value itself
 	int				index;	// the index we give it
@@ -25,7 +25,7 @@ typedef struct	s_node
 	struct s_node	*prev;	// previous node
 }	t_node;
 
-typedef struct	s_stack
+typedef struct s_stack
 {
 	t_node	*top;	// first element of the stack
 	t_node	*bot;	// last element of the stack
@@ -50,12 +50,12 @@ void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 
 // Sorting
-int 	*stack_to_array(t_stack *a);
+int		*stack_to_array(t_stack *a);
 void	sort_int_array(int *arr, int size);
 int		find_index(int *arr, int size, int value);
 int		assign_indexes(t_stack *a);
 
-int 	is_sorted(t_stack *a);
+int		is_sorted(t_stack *a);
 void	sort_2(t_stack *a);
 void	sort_3(t_stack *a);
 void	sort_4_5(t_stack *a, t_stack *b);
@@ -67,19 +67,19 @@ void	rotate_to_top(t_stack *a, int pos);
 // Turk
 t_node	*find_min(t_stack *a);
 t_node	*find_target_a(t_stack *a, int b_index);
-int 	pos_of_node(t_stack *s, t_node *node);
-int 	rot_cost(t_stack *s, int pos);
+int		pos_of_node(t_stack *s, t_node *node);
+int		rot_cost(t_stack *s, int pos);
 int		combined_cost(int cost_a, int cost_b);
-int 	total_cost_for_node(t_stack *a, t_stack *b, t_node *bnode);
+int		total_cost_for_node(t_stack *a, t_stack *b, t_node *bnode);
 void	move_node_to_a(t_stack *a, t_stack *b, t_node *bnode);
 t_node	*find_cheapest_bnode(t_stack *a, t_stack *b);
 void	turk_sort(t_stack *a, t_stack *b);
 
 // Parsing
-int	is_valid_token(char *s);
-int	safe_atoi(const char *s, int *out);
+int		is_valid_token(char *s);
+int		safe_atoi(const char *s, int *out);
 
-int	parse_input(int argc, char **argv, t_stack *a); // public parsing API
+int		parse_input(int argc, char **argv, t_stack *a); // public parsing API
 
 // Utils
 t_node	*pop_top(t_stack	*s);
@@ -92,4 +92,4 @@ char	**ft_split(char const *s, char c);
 t_node	*new_node(int value);
 void	free_nodes(t_stack *s);
 
-# endif
+#endif

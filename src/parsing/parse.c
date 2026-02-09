@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-jes <lude-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: lude-jes <lude-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 21:57:26 by lude-jes          #+#    #+#             */
-/*   Updated: 2026/01/24 17:25:55 by lude-jes         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:04:23 by lude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	process_tokens(t_stack *a, char **tokens)
 	t_node	*n;
 	int		c;
 	int		i;
-	
+
 	i = 0;
 	while (tokens[i])
 	{
@@ -71,7 +71,7 @@ static int	parse_argv_string(t_stack *a, char *arg)
 {
 	char	**tokens;
 	int		ok;
-	
+
 	if (!a)
 		return (0);
 	if (!arg || arg[0] == '\0')
@@ -90,7 +90,7 @@ static int	parse_argv_string(t_stack *a, char *arg)
 int	parse_input(int argc, char **argv, t_stack *a)
 {
 	int	i;
-	
+
 	i = 1;
 	if (argc < 2)
 		return (1);
